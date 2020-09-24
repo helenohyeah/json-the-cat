@@ -6,8 +6,8 @@ const fetchBreedDescription = (breed, callback) => {
     const result = JSON.parse(body);
     // if input is invalid and no desc found
     if (result.length === 0) {
-      console.log(`Sorry, no description was found for: ${breed}`);
-      process.exit();
+      const error = `Error: No description was found for: ${breed}`;
+      return callback(error);
     }
     return callback(err, result[0].description);
   });

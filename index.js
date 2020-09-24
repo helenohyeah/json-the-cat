@@ -9,9 +9,9 @@ const input = getUserInput();
 fetchBreedDescription(input, (err, desc) => {
   // error case
   if (err) {
-    console.log(`Error: ${err.code}`);
+    console.log(err);
     process.exit();
   } else {
-    console.log(`Description: ${desc}`);
+    console.log(desc);
   }
 });
